@@ -15,20 +15,20 @@ def GetAreaOfCircleRadius(radien : float):
 def GetAreaOfCircleDiameter(diameter : float):
     return (math.pi * diameter**2) / 4
 
-def GetAreaOfCirclesektor(radien : float, vinkel : float, arc : float):
-    arc = arc or None
-    vinkel = vinkel or None
+def GetAreaOfCirclesektor(radien : float, vinkel : float, arc = None):
     if arc == None:
         if vinkel == None:
-            print("please provide a angle")
+            print("please provide an angle or an arc")
             return
-        arc = (vinkel / 360) * 2*math.pi*radien
+        arc = GetArc(vinkel, radien)
     return (arc*radien) / 2
-def GetArc(vinkel, )
+def GetArc(vinkel : float, radien : float):
+    return (vinkel / 360) * 2*math.pi*radien
 
 
 #print(GetAreaOfTriangle(2, 5))
 #print(GetAreaOfParallellogram(2,5))
 #print(GetAreaOfCircleRadius(5))
 #print(GetAreaOfCircleDiameter(5)) #det tog mig tyvärr lite längre tid än vad det borde för att märka att samma diameter och radien inte ska ge samma svar 
-print(GetAreaOfCirclesektor(5, 150))
+print(GetAreaOfCirclesektor(5, 120, GetArc(120, 5)))
+print(GetAreaOfCirclesektor(5, 120))
