@@ -1,5 +1,8 @@
-import math
+import math #används för att få t.ex math.pi
 
+#jag använder mig av : float för det gör det lättare att se vad den förväntar sig när man använder sig av den,
+#t.ex så stor det istället för base = any så står det base = float, så då vet man ungefär vad den förväntar sig.
+#Jag har ingen error handling eftersom jag tror det är bättre ifall man förväntar sig att där den används har error handling istället
 def GetAreaOfTriangle(base : float, height : float):
     return (base * height) / 2
 
@@ -24,7 +27,6 @@ def GetAreaOfCirclesektor(radien : float, vinkel : float, arc = None):
     return (arc*radien) / 2
 def GetArc(vinkel : float, radien : float):
     return (vinkel / 360) * 2*math.pi*radien
-
 
 #print(GetAreaOfTriangle(2, 5))
 #print(GetAreaOfParallellogram(2,5))
