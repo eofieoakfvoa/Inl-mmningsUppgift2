@@ -1,10 +1,10 @@
 import math
 
-def GetAreaOfTriangle():
-    pass
+def GetAreaOfTriangle(base, height):
+    return (base * height) / 2
 
-def GetAreaOfParallellogram():
-    pass
+def GetAreaOfParallellogram(base, height):
+    return base * height
 
 def GetAreaOfParallelltrapets():
     pass
@@ -14,3 +14,6 @@ def GetAreaOfCircle():
 
 def GetAreaOfCirclesektor():
     pass
+
+#print(GetAreaOfTriangle(2, 5))
+#print(GetAreaOfParallellogram(2,5))
