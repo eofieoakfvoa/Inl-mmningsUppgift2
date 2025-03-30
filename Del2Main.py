@@ -30,7 +30,6 @@ def CreateFile():
     print("Skriv nu path till vart du vill att den ska vara eller [Current] för att få den i samma map som denna är i")
     choice = input()
     if choice.lower() == "current":
-        print(os.path.abspath(os.getcwd()))
-        #Del2Modul.CreateTextFile(os.path.abspath(os.getcwd()))
+        Del2Modul.CreateTextFile(os.path.abspath(os.getcwd()), name)
 
 Main()
